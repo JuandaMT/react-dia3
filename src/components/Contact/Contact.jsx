@@ -36,6 +36,7 @@ const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("sending data..." + data.name + " " + data.email);
+    localStorage.setItem("form",JSON.stringify(data))
     clearState();
     setTimeout(() => {
       navigate("/");
